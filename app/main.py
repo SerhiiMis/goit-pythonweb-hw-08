@@ -2,7 +2,7 @@ from fastapi import FastAPI
 from app.routers import contacts
 from app import models, database
 
-app = FastAPI(title="Contacts API")
+app = FastAPI(title="Contacts API", debug=True)
 
 # Підключення роутерів
 app.include_router(contacts.router)
