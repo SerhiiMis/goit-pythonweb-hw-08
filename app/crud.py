@@ -4,7 +4,9 @@ from sqlalchemy import or_, extract
 from typing import List, Optional
 from datetime import datetime, timedelta
 
-from . import models, schemas
+from . import models
+
+from . import schemas
 
 # Create
 async def create_contact(contact: schemas.ContactCreate, db: AsyncSession) -> models.Contact:
